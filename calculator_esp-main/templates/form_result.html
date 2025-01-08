@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <title>Resultados de formulario</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__text">
+            <h1>Gracias por su información</h1>
+            <p>A continuación se muestran los datos proporcionados</p>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        <div class="form">
+            <div class="user">
+                <ul class="user-info">
+                    <li class="user-info__item">
+                        <label>Su nombre:</label>
+                        <p>{{ name }}</p>
+                    </li>
+                    <li class="user-info__item">
+                        <label>Su E-mail:</label>
+                        <p>{{ email }}</p>
+                    </li>
+                </ul>
+                <ul class="address-date">
+                    <li class="user-info__item">
+                        <label>Su dirección:</label>
+                        <p>{{ address }}</p>
+                    </li>
+                    <li class="user-info__item">
+                        <label>Fecha seleccionada:</label>
+                        <p>{{ date }}</p>
+                    </li>
+                </ul>
+            </div>
+            <a href="/" class="button">Volver al inicio</a>
+        </div>
+        {% endblock %}
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
